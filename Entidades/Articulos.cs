@@ -10,9 +10,9 @@ namespace RegistroParcial1.Entidades
         [Key]
         public int ProductoId { get; set; }
         public string Descripcion { get; set; }
-        public float Existencia { get; set; }
-        public float Costo { get; set; }
-        public float ValorInventario { get; set; }
+        public int Existencia { get; set; }
+        public int Costo { get; set; }
+        public int ValorInventario { get; set; }
     
         public Articulos()
         {

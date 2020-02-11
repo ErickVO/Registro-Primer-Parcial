@@ -5,10 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroParcial1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Registro Productos" Height="450" Width="680">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="225,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="225,109,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="IdTextBox" HorizontalAlignment="Left" Margin="198,60,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="DescripcionTextBox" HorizontalAlignment="Left" Margin="198,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ExistenciaTextBox" HorizontalAlignment="Left" Margin="198,140,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="ExistenciaTextBox_TextChanged"/>
+        <TextBox x:Name="CostoTextBox" HorizontalAlignment="Left" Margin="198,177,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="CostoTextBox_TextChanged"/>
+        <TextBox x:Name="ValorTextBox" HorizontalAlignment="Left" Margin="198,213,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <Button x:Name="btnNuevo" Content="Nuevo" HorizontalAlignment="Left" Margin="115,289,0,0" VerticalAlignment="Top" Height="50" Width="90" Click="btnNuevo_Click"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="270,289,0,0" VerticalAlignment="Top" Height="50" Width="90" Click="btnGuardar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="420,289,0,0" VerticalAlignment="Top" Height="50" Width="90" Click="btnEliminar_Click"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="420,59,0,0" VerticalAlignment="Top" Height="50" Width="90" Click="btnBuscar_Click"/>
+        <Label Content="Producto Id:" HorizontalAlignment="Left" Margin="97,59,0,0" VerticalAlignment="Top"/>
+        <Label Content="Descripción:" HorizontalAlignment="Left" Margin="97,102,0,0" VerticalAlignment="Top"/>
+        <Label Content="Existencia:" HorizontalAlignment="Left" Margin="97,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Costo:" HorizontalAlignment="Left" Margin="97,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.605,0.579"/>
+        <Label Content="Valor Inventario:" HorizontalAlignment="Left" Margin="97,213,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.605,0.579"/>
+        <Button x:Name="btnConsultar" Content="Consultar" HorizontalAlignment="Left" Margin="550,289,0,0" VerticalAlignment="Top" Height="50" Width="90" Click="btnConsultar_Click" />
 
     </Grid>
 </Window>

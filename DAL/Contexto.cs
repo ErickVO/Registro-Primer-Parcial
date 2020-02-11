@@ -12,7 +12,7 @@ namespace RegistroParcial1.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server = DESKTOP-9RKG0AB\SQLEXPRESS; DataBase = ArticulosDb; Trusted_Connection: True");
+            optionsBuilder.UseSqlServer(@"Server = DESKTOP-9RKG0AB\SQLEXPRESS; Database = ArticulosDb; Trusted_Connection = True; ");
         }
     }
 }

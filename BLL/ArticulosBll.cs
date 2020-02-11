@@ -3,6 +3,8 @@ using RegistroParcial1.DAL;
 using RegistroParcial1.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace RegistroParcial1.BLL
@@ -93,6 +95,27 @@ namespace RegistroParcial1.BLL
                 db.Dispose();
             }
             return articulos;
+        }
+        
+        public static List<Articulos> GetList(Expression<Func<Articulos,bool>> articulos)
+        {
+            Contexto db = new Contexto();
+            List<Articulos> listado = new List<Articulos>();
+
+            try
+            {
+                listado = db.Articulos.Where(articulos).ToList();
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+
+            return listado;
         }
     }
 }
